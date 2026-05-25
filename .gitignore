@@ -1,0 +1,14 @@
+node_modules/
+dist/
+src/data/entries.json
+export/notebooklm/*.md
+!export/notebooklm/README.md
+!export/notebooklm/.gitkeep
+*.gdoc
+*.gsheet
+.DS_Store
+Thumbs.db
+hermes.config.json
+.env
+.env.local
+.wiki-admin-settings.json

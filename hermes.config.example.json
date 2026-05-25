@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "agentName": "Hermes",
+  "projectLabel": "AI-Synapse Wiki",
+  "gmailConfigPath": "../gemini_tuner/gmail_config.json",
+  "notifyOn": ["agent-task-complete", "build-green"],
+  "defaultSubject": "[{project}] 작업 완료",
+  "notes": "gmail_config.json은 git에 올리지 마세요. sender/app_pw/receiver만 사용합니다."
+}
