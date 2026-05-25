@@ -19,7 +19,10 @@ import { AdminSettingsIndexPage } from "./pages/admin/AdminSettingsIndexPage";
 import { AdminSettingsLayout } from "./pages/admin/AdminSettingsLayout";
 import { AdminToolsPage } from "./pages/admin/AdminToolsPage";
 
-export const router = createBrowserRouter([
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
+export const router = createBrowserRouter(
+  [
   {
     path: "/",
     element: <UserLayout />,
@@ -130,7 +133,9 @@ export const router = createBrowserRouter([
       { path: "*", element: <Navigate to="/admin" replace /> },
     ],
   },
-]);
+  ],
+  { basename: basename === "/" ? undefined : basename },
+);
 
 /** @deprecated 북마크용 — /admin/{kind}/:slug → /admin/settings/{kind}/:slug */
 function LegacySettingsEntryRedirect({ kind }: { kind: "hubs" | "stories" }) {

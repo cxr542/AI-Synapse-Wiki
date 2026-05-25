@@ -4,7 +4,9 @@ import { adminApiPlugin } from "./scripts/vite-admin-api.mjs";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
+  const base = process.env.VITE_BASE || "/";
   return {
+    base,
     plugins: [react(), adminApiPlugin(env)],
     server: { port: 5173, host: "127.0.0.1" },
   };
